@@ -1,10 +1,10 @@
 NAME = ex00
 
-HEADERS_LIST = 
+HEADERS_LIST = Bureaucrat.hpp
 HEADERS_DIRECTORY = ./includes/
 HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
-SOURCES_LIST = 
+SOURCES_LIST = Bureaucrat.cpp main.cpp
 SOURCES_DIRECTORY = ./sources/
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 
