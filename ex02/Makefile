@@ -1,4 +1,4 @@
-NAME = ex01
+NAME = ex02
 
 HEADERS_LIST = Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
 HEADERS_DIRECTORY = ./includes/
