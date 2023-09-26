@@ -3,51 +3,34 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "Bureaucrat.hpp"
+#include "Intern.hpp"
 
 int main( void ) {
+	{
+		Intern someRandomIntern;
+		AForm* rrf;
 
-	ShrubberyCreationForm s("Shrubbery");
-	RobotomyRequestForm r("Robotomy");
-	PresidentialPardonForm p("Presidential");
-	Bureaucrat b("bureaucrat", 2);
+		rrf = someRandomIntern.makeForm("Robotomy Request", "Bender");
 
-	try
-	{
-		b.executeForm(s);
-		b.executeForm(r);
-		b.executeForm(p);
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	std::cout << "---------------------" << std::endl;
-		try
-	{
-		s.beSigned(b);
-		r.beSigned(b);
-		p.beSigned(b);
-		b.executeForm(s);
-		b.executeForm(r);
-		b.executeForm(p);
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+		delete rrf;
 
-	std::cout << "---------------------" << std::endl;
-		try
-	{
-		s.beSigned(b);
-		std::cout << "+++++++++++" << std::endl;
-		b.executeForm(s);
-		b.executeForm(r);
-		b.executeForm(p);
+		rrf = someRandomIntern.makeForm("Presidential Pardon", "Bender");
+
+		delete rrf;
+
+		rrf = someRandomIntern.makeForm("Shrubbery Creation", "Bender");
+
+		delete rrf;
 	}
-	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		try {
+			Intern someRandomIntern;
+			AForm* rrf;
+
+			rrf = someRandomIntern.makeForm("Give me a Form", "Bender");
+		} catch ( Intern::FormNotFoundException& e ) {
+			std::cerr << e.what() << std::endl;
+		}
 	}
 
 	return ( 0 );
