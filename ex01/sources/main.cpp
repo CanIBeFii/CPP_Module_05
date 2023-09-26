@@ -1,52 +1,87 @@
 #include "Bureaucrat.hpp"
 
 int main( void ) {
+	// {
+	// 	try {
+	// 		Bureaucrat bob( "Bob", 2 );
+	// 		std::cout << bob << std::endl;
+
+	// 		bob.incrementGrade();
+
+	// 		std::cout << bob << std::endl;
+
+	// 		bob.incrementGrade();
+
+	// 		std::cout << bob << std::endl;
+
+	// 	} catch ( std::exception& e ) {
+	// 		std::cerr << e.what() << std::endl;
+	// 	}
+	// }
+	// {
+	// 	try {
+	// 		Bureaucrat bob( "Bob", 149 );
+	// 		std::cout << bob << std::endl;
+
+	// 		bob.decrementGrade();
+
+	// 		std::cout << bob << std::endl;
+
+	// 		bob.decrementGrade();
+
+	// 		std::cout << bob << std::endl;
+
+	// 	} catch ( std::exception& e ) {
+	// 		std::cerr << e.what() << std::endl;
+	// 	}
+	// }
+	// {
+	// 	try {
+	// 		Bureaucrat bob( "Bob", -1 );
+	// 	} catch ( std::exception& e ) {
+	// 		std::cerr << e.what() << std::endl;
+	// 	}
+	// }
+	// {
+	// 	try {
+	// 		Bureaucrat bob( "Bob", 151 );
+	// 	} catch ( std::exception& e ) {
+	// 		std::cerr << e.what() << std::endl;
+	// 	}
+	// }
 	{
 		try {
-			Bureaucrat bob( "Bob", 2 );
-			std::cout << bob << std::endl;
+			Form form( "Form", 10, 150 );
+			Form form2( "form2", 30, 140 );
 
-			bob.incrementGrade();
+			Bureaucrat	bob( "BOB", 5 );
 
-			std::cout << bob << std::endl;
+			bob.signForm( form );
 
-			bob.incrementGrade();
+			std::cout << "Is form signed: " << form2.getSigned() << std::endl;
 
-			std::cout << bob << std::endl;
+			form2 = form;
 
+			std::cout << "Is form signed: " << form2.getSigned() << std::endl;
 		} catch ( std::exception& e ) {
 			std::cerr << e.what() << std::endl;
 		}
 	}
 	{
 		try {
-			Bureaucrat bob( "Bob", 149 );
-			std::cout << bob << std::endl;
+			Form form( "Form", 50 , 100 );
 
-			bob.decrementGrade();
+			std::cout << form << std::endl;
 
-			std::cout << bob << std::endl;
+			Bureaucrat carl( "Carl", 51 );
 
-			bob.decrementGrade();
+			std::cout << carl << std::endl;
 
-			std::cout << bob << std::endl;
+			carl.signForm( form );
 
 		} catch ( std::exception& e ) {
 			std::cerr << e.what() << std::endl;
 		}
 	}
-	{
-		try {
-			Bureaucrat bob( "Bob", -1 );
-		} catch ( std::exception& e ) {
-			std::cerr << e.what() << std::endl;
-		}
-	}
-	{
-		try {
-			Bureaucrat bob( "Bob", 151 );
-		} catch ( std::exception& e ) {
-			std::cerr << e.what() << std::endl;
-		}
-	}
+	return ( 0 );
 }
