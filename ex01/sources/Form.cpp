@@ -15,6 +15,13 @@ Form::Form( const std::string& name, int signerGrade, int executeGrade ) :
 	std::cout << BOLDYELLOW << "Type " << BOLDGREEN << "Constructor" << RESET; 
 	std::cout << " called" << std::endl;
 
+	if ( _signerGrade < 1 || _executeGrade < 1 ) {
+		throw Form::GradeTooHighException();
+	}
+	if ( _signerGrade > 150 || _executeGrade > 150 ) {
+		throw Form::GradeTooLowException();
+	}
+
 	_signed = false;
 }
 

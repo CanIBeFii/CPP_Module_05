@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main( void ) {
 	// {
@@ -49,6 +50,20 @@ int main( void ) {
 	// 		std::cerr << e.what() << std::endl;
 	// 	}
 	// }
+	{
+		try {
+			Form form( "Form", 10, 152 );
+		} catch ( std::exception& e ) {
+			std::cerr << e.what() << std::endl;
+		}
+	}
+	{
+		try {
+			Form form( "Form", 0, 15 );
+		} catch ( std::exception& e ) {
+			std::cerr << e.what() << std::endl;
+		}
+	}
 	{
 		try {
 			Form form( "Form", 10, 150 );
