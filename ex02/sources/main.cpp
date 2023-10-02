@@ -3,9 +3,12 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "Bureaucrat.hpp"
+#include <cstdlib>
 
 int main( void ) {
 
+	srand( time( NULL ) );
+	
 	ShrubberyCreationForm s("Shrubbery");
 	RobotomyRequestForm r("Robotomy");
 	PresidentialPardonForm p("Presidential");

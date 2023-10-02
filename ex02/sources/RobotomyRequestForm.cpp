@@ -1,4 +1,5 @@
 #include "RobotomyRequestForm.hpp"
+#include <cstdlib>
 
 // Constructors
 RobotomyRequestForm::RobotomyRequestForm( void ) : AForm( "Robotomy Request", 72, 45 ), _target( "default" ) {
@@ -52,8 +53,7 @@ void	RobotomyRequestForm::execute( const Bureaucrat& executor ) const {
 		throw RobotomyRequestForm::GradeTooLowException();
 	}
 
-	static int i;
-	if ( i % 2 == 0 ) {
+	if ( rand() % 2 == 0 ) {
 		std::cout << "Frrrrmmm " << _target << " has been robotomized successfully" << std::endl; 
 	}
 	else {

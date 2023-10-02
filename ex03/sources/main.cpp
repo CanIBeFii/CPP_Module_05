@@ -4,8 +4,10 @@
 #include "PresidentialPardonForm.hpp"
 #include "Bureaucrat.hpp"
 #include "Intern.hpp"
+#include <cstdlib>
 
 int main( void ) {
+	srand( time( NULL ) );
 	{
 		Intern someRandomIntern;
 		AForm* rrf;
