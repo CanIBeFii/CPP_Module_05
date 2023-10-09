@@ -1,8 +1,8 @@
 #ifndef SHRUBBERYCREATIONFORM_HPP
 #define SHRUBBERYCREATIONFORM_HPP
 
-#include "AForm.hpp"
-#include "Bureaucrat.hpp"
+#include "../includes/AForm.hpp"
+#include "../includes/Bureaucrat.hpp"
 
 #include <fstream>
 

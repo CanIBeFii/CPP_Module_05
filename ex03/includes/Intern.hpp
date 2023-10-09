@@ -3,10 +3,10 @@
 
 #include <iostream>
 #include <string>
-#include "AForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
+#include "../includes/AForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
 
 class Intern {
 	public:

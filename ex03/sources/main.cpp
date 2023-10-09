@@ -1,9 +1,9 @@
-#include "AForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "Bureaucrat.hpp"
-#include "Intern.hpp"
+#include "../includes/AForm.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
+#include "../includes/Bureaucrat.hpp"
+#include "../includes/Intern.hpp"
 #include <cstdlib>
 
 int main( void ) {

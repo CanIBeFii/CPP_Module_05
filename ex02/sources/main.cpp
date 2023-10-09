@@ -1,8 +1,8 @@
-#include "AForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "Bureaucrat.hpp"
+#include "../includes/AForm.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
+#include "../includes/Bureaucrat.hpp"
 #include <cstdlib>
 
 int main( void ) {
@@ -25,13 +25,18 @@ int main( void ) {
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << "---------------------" << std::endl;
-		try
+	try
 	{
 		s.beSigned(b);
 		r.beSigned(b);
 		p.beSigned(b);
+
 		b.executeForm(s);
+		std::cout << std::endl;
+
 		b.executeForm(r);
+		std::cout << std::endl;
+		
 		b.executeForm(p);
 	}
 	catch (std::exception &e)
@@ -40,7 +45,7 @@ int main( void ) {
 	}
 
 	std::cout << "---------------------" << std::endl;
-		try
+	try
 	{
 		s.beSigned(b);
 		std::cout << "+++++++++++" << std::endl;

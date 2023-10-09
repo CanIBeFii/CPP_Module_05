@@ -1,4 +1,4 @@
-#include "Intern.hpp"
+#include "../includes/Intern.hpp"
 
 // Constructors
 Intern::Intern( void ) {

@@ -2,7 +2,7 @@
 #define AFORM_HPP
 
 #include <iostream>
-#include "Bureaucrat.hpp"
+#include "../includes/Bureaucrat.hpp"
 
 class Bureaucrat;
 

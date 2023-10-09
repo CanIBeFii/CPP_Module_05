@@ -1,8 +1,8 @@
 #ifndef ROBOTOMYREQUESTFORM_HPP
 #define ROBOTOMYREQUESTFORM_HPP
 
-#include "AForm.hpp"
-#include "Bureaucrat.hpp"
+#include "../includes/AForm.hpp"
+#include "../includes/Bureaucrat.hpp"
 
 class RobotomyRequestForm : public AForm {
 	public:

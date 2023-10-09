@@ -1,5 +1,5 @@
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "../includes/Bureaucrat.hpp"
+#include "../includes/Form.hpp"
 
 int main( void ) {
 	// {
@@ -29,7 +29,7 @@ int main( void ) {
 	// 		std::cout << bob << std::endl;
 
 	// 		bob.decrementGrade();
-
+	
 	// 		std::cout << bob << std::endl;
 
 	// 	} catch ( std::exception& e ) {
@@ -71,7 +71,11 @@ int main( void ) {
 
 			Bureaucrat	bob( "BOB", 5 );
 
+			std::cout << "Is form " << form.getName() << " signed: " << form.getSigned() << std::endl;
+
 			bob.signForm( form );
+			
+			std::cout << "Is form " << form.getName() << " signed: " << form.getSigned() << std::endl;
 
 			std::cout << "Is form signed: " << form2.getSigned() << std::endl;
 

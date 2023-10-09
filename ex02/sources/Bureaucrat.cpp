@@ -1,4 +1,4 @@
-#include "Bureaucrat.hpp"
+#include "../includes/Bureaucrat.hpp"
 
 // Constructors
 Bureaucrat::Bureaucrat( void ) : _name( "Default" ), _grade( 150 ) {
